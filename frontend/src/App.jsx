@@ -325,7 +325,7 @@ function App() {
         error.message.includes("fetch")
       ) {
         setErrorMessage(
-          "Could not connect to DealRadar AI backend. Make sure FastAPI is running on http://127.0.0.1:8000."
+          "Could not connect to DealRadar AI backend. Please try again"
         );
       } else {
         setErrorMessage(
