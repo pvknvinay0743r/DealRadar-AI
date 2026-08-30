@@ -5,6 +5,15 @@ AI-powered sales conversation intelligence that analyzes sales conversations to 
 DealRadar AI helps sales teams understand conversations faster and avoid letting promising deals go cold.
 
 ---
+## Live Demo
+
+**Live Application:** https://dealradar-ai-3zf5.onrender.com/
+
+DealRadar AI is deployed as a full-stack application with a React frontend, FastAPI backend, and Gemini AI integration.
+
+### Demo Flow
+
+Sales Conversation → AI Analysis → Sales Intelligence → Follow-up Action
 
 ## Overview
 
