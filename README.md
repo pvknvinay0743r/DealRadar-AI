@@ -145,3 +145,44 @@ DealRadar-AI/
 ├── .gitignore
 ├── PRODUCT.md
 └── README.md
+
+---
+
+## Running Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/pvknvinay0743r/dealradar-ai.git
+cd dealradar-ai
+---
+
+## Screenshots
+
+### DealRadar AI Dashboard
+
+![DealRadar AI Dashboard](screenshots/Sample1.png)
+
+### Search, Filters & Conversation History
+
+![Search, Filters & Conversation History](screenshots/Sample2.png)
+
+### Follow-up Radar & Google Calendar
+
+![Follow-up Radar & Google Calendar](screenshots/Sample3.png)
+
+### Additional Application View
+
+![DealRadar AI](screenshots/Sample4.png)
+
+### Additional Application View
+
+![DealRadar AI](screenshots/Sample5.png)
+
+### Additional Application View
+
+![DealRadar AI](screenshots/Sample6.png)
+
+### Additional Application View
+
+![DealRadar AI](screenshots/Sample7.png)
