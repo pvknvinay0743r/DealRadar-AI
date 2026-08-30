@@ -1,276 +1,138 @@
-\# DealRadar AI
+# DealRadar AI
 
+## Problem
 
+Sales representatives can miss important follow-ups because valuable information from sales conversations, meetings, and emails is difficult to organize and track.
 
-\## Problem
+DealRadar AI converts unstructured sales conversations into structured sales intelligence and helps sales representatives identify what to do next.
 
+---
 
+## Target Users
 
-Sales representatives miss important follow-ups
+- Sales representatives
+- Sales teams
+- Business development teams
+- Account executives
 
-because conversations, emails, and meeting information
+---
 
-are difficult to track.
+## MVP
 
+The current MVP focuses on:
 
+1. Analyze sales conversations
+2. Detect buying intent
+3. Identify sentiment
+4. Determine deal stage
+5. Identify objections
+6. Assign deal priority
+7. Detect follow-up requirements
+8. Identify follow-up dates
+9. Recommend the next best action
+10. Store conversation analysis history
+11. Search analyzed conversations
+12. Filter conversations
+13. Sort conversations
+14. Add follow-ups to Google Calendar
 
-\## Target User
+---
 
+## Core Screens
 
+### Sales Conversation Input
 
-Sales representatives and sales teams.
+Users can paste:
 
+- Sales call transcripts
+- Meeting notes
+- Email conversations
+- Other sales conversation text
 
+### Sales Intelligence Dashboard
 
-\## MVP
+Displays:
 
+- Prospect
+- Company
+- Deal stage
+- Buying intent
+- Sentiment
+- Objection
+- Priority
+- Follow-up status
+- Follow-up date
+- Next best action
 
+### Conversation History
 
-1\. Analyze sales conversations
+Previously analyzed conversations remain available in browser storage and can be searched, filtered, sorted, and expanded to view the original conversation.
 
-2\. Detect follow-up requirements
+### Follow-up Radar
 
-3\. Extract important deal information
+Displays upcoming follow-ups and places the nearest follow-up first.
 
-4\. Prioritize follow-ups
+---
 
-5\. Recommend next-best action
+## AI Analysis Output
 
-6\. Generate personalized follow-up messages
+The backend returns structured sales intelligence containing:
 
+- `prospect_name`
+- `company_name`
+- `deal_stage`
+- `intent`
+- `sentiment`
+- `objection`
+- `follow_up_required`
+- `follow_up_date`
+- `priority`
+- `next_best_action`
 
+### Allowed Values
 
-\## Core Screens
+#### Intent
 
+- High
+- Medium
+- Low
+- Unknown
 
+#### Sentiment
 
-1\. Dashboard
+- Positive
+- Neutral
+- Negative
+- Unknown
 
-2\. Deal Analysis
+#### Priority
 
-3\. Follow-up Composer
+- High
+- Medium
+- Low
 
+#### Deal Stage
 
+- New
+- Qualified
+- Demo
+- Evaluation
+- Negotiation
+- Closed-Won
+- Closed-Lost
+- Unknown
 
-\## AI Output
+---
 
+## API Contract
 
+### POST `/analyze-conversation`
 
-\- Prospect
+Analyzes a sales conversation using the AI backend.
 
-\- Company
+#### Request
 
-\- Deal stage
-
-\- Intent
-
-\- Sentiment
-
-\- Objection
-
-\- Follow-up required
-
-\- Follow-up date
-
-\- Next best action
-
-\- Urgency
-
-\- Follow-up message
-
-
-
-\## Demo Story
-
-
-
-Conversation → AI Analysis → Priority → Next Action → Message
-
-
-
-\## Tech Stack
-
-
-
-Frontend: React + Vite
-
-Backend: FastAPI
-
-AI: LLM API
-
-Database: SQLite
-
-UI: Tailwind CSS + shadcn/ui
-
-
-
-
-
-\## AI Analysis Output
-
-
-
-The AI analyzes a sales conversation and returns:
-
-
-
-\- prospect\_name
-
-\- company\_name
-
-\- deal\_stage
-
-\- intent
-
-\- sentiment
-
-\- objection
-
-\- follow\_up\_required
-
-\- follow\_up\_date
-
-\- priority
-
-\- next\_best\_action
-
-
-
-\### Allowed Values
-
-
-
-Intent:
-
-\- High
-
-\- Medium
-
-\- Low
-
-\- Unknown
-
-
-
-Sentiment:
-
-\- Positive
-
-\- Neutral
-
-\- Negative
-
-\- Unknown
-
-
-
-Priority:
-
-\- High
-
-\- Medium
-
-\- Low
-
-
-
-Deal Stage:
-
-\- New
-
-\- Qualified
-
-\- Demo
-
-\- Evaluation
-
-\- Negotiation
-
-\- Closed-Won
-
-\- Closed-Lost
-
-\- Unknown
-
-
-
-\## API Contract
-
-
-
-\### POST /analyze-conversation
-
-
-
-Request:
-
-
-
+```json
 {
-
-&#x20; "conversation": "sales conversation text"
-
+  "conversation": "sales conversation text"
 }
-
-
-
-Response:
-
-
-
-{
-
-&#x20; "prospect\_name": "Rahul",
-
-&#x20; "company\_name": null,
-
-&#x20; "deal\_stage": "Evaluation",
-
-&#x20; "intent": "High",
-
-&#x20; "sentiment": "Positive",
-
-&#x20; "objection": "Pricing",
-
-&#x20; "follow\_up\_required": true,
-
-&#x20; "follow\_up\_date": "Tuesday",
-
-&#x20; "priority": "High",
-
-&#x20; "next\_best\_action": "Send enterprise pricing details"
-
-}
-
-
-
-\### POST /generate-follow-up
-
-
-
-Request:
-
-
-
-{
-
-&#x20; "conversation": "sales conversation text",
-
-&#x20; "analysis": {}
-
-}
-
-
-
-Response:
-
-
-
-{
-
-&#x20; "subject": "Enterprise Pricing Details",
-
-&#x20; "message": "Personalized follow-up message"
-
-}
-
