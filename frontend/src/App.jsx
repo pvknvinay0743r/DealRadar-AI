@@ -256,7 +256,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/analyze-conversation",
+        "https://dealradar-ai-backend.onrender.com/analyze-conversation",
         {
           method: "POST",
           headers: {
